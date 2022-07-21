@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "467120203947",
+    "project_id": "tidtor-dating-app",
+    "storage_bucket": "tidtor-dating-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:467120203947:android:0d4edacae05db19a08afee",
+        "android_client_info": {
+          "package_name": "com.teamsuccess.tidtor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "467120203947-6kdvkoctlnub2nebn8vlarkrfc97deg5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAB79pNXnXzIw5yL8747jL6KYm4ENcSH5Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "467120203947-6kdvkoctlnub2nebn8vlarkrfc97deg5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

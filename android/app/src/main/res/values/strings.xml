@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hookup4u</string>
+
+    <!-- Replace "000000000000" with your Facebook App ID here. -->
+    <string name="facebook_app_id">1074041950213901</string>
+
+    <!--
+      Replace "000000000000" with your Facebook App ID here.
+      **NOTE**: The scheme needs to start with `fb` and then your ID.
+    -->
+    <string name="fb_login_protocol_scheme">00000000000</string>
+    <string name="facebook_client_token">0000000000000000</string>
+</resources>
