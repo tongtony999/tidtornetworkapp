@@ -7,6 +7,7 @@ import 'package:easy_localization/easy_localization.dart';
 
 class ShowGender extends StatefulWidget {
   final Map<String, dynamic> userData;
+
   ShowGender(this.userData);
 
   @override
@@ -18,6 +19,7 @@ class _ShowGenderState extends State<ShowGender> {
   bool woman = false;
   bool eyeryone = false;
   final _scaffoldKey = GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,12 +63,12 @@ class _ShowGenderState extends State<ShowGender> {
               children: <Widget>[
                 OutlinedButton(
                   style: OutlinedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25)),
                     side: BorderSide(
                         width: 1,
                         style: BorderStyle.solid,
                         color: man ? primaryColor : secondryColor),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(25)),
                   ),
                   child: Container(
                     height: MediaQuery.of(context).size.height * .065,
@@ -78,7 +80,6 @@ class _ShowGenderState extends State<ShowGender> {
                                 color: man ? primaryColor : secondryColor,
                                 fontWeight: FontWeight.bold))),
                   ),
-
                   onPressed: () {
                     setState(() {
                       woman = false;
@@ -91,13 +92,13 @@ class _ShowGenderState extends State<ShowGender> {
                   padding: const EdgeInsets.all(10.0),
                   child: OutlinedButton(
                     style: OutlinedButton.styleFrom(
-                      side: BorderSide(
-                        color: woman ? primaryColor : secondryColor,
-                        width: 1,
-                        style: BorderStyle.solid,
-                      ),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(25)),
+                        side: BorderSide(
+                          color: woman ? primaryColor : secondryColor,
+                          width: 1,
+                          style: BorderStyle.solid,
+                        ),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(25))
                     ),
                     child: Container(
                       height: MediaQuery.of(context).size.height * .065,
@@ -109,7 +110,6 @@ class _ShowGenderState extends State<ShowGender> {
                                   color: woman ? primaryColor : secondryColor,
                                   fontWeight: FontWeight.bold))),
                     ),
-
                     onPressed: () {
                       setState(() {
                         woman = true;
@@ -123,14 +123,13 @@ class _ShowGenderState extends State<ShowGender> {
                 ),
                 OutlinedButton(
                   style: OutlinedButton.styleFrom(
-                    side: BorderSide(
-                        width: 1,
-                        style: BorderStyle.solid,
-                        color: eyeryone ? primaryColor : secondryColor),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(25)),
+                      side: BorderSide(
+                          width: 1,
+                          style: BorderStyle.solid,
+                          color: eyeryone ? primaryColor : secondryColor),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25))
                   ),
-
                   child: Container(
                     height: MediaQuery.of(context).size.height * .065,
                     width: MediaQuery.of(context).size.width * .75,
@@ -141,7 +140,6 @@ class _ShowGenderState extends State<ShowGender> {
                                 color: eyeryone ? primaryColor : secondryColor,
                                 fontWeight: FontWeight.bold))),
                   ),
-
                   onPressed: () {
                     setState(() {
                       woman = false;

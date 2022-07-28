@@ -29,6 +29,13 @@
             {
               "client_id": "467120203947-6kdvkoctlnub2nebn8vlarkrfc97deg5.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "467120203947-eu8psjlc6d16ri7j2h3hc6gpfa5odg7u.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.teamsuccess.tidtor"
+              }
             }
           ]
         }

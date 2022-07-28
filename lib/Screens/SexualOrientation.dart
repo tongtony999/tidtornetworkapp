@@ -100,7 +100,6 @@ class _SexualOrientationState extends State<SexualOrientation> {
                                           : secondryColor,
                                       fontWeight: FontWeight.bold))),
                         ),
-
                         onPressed: () {
                           setState(() {
                             if (selected.length < 3) {

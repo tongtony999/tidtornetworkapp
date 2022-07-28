@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hookup4u/Screens/SexualOrientation.dart';
-import 'package:hookup4u/Screens/UserName.dart';
 import 'package:hookup4u/util/color.dart';
 import 'package:hookup4u/util/snackbar.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -63,12 +62,14 @@ class _GenderState extends State<Gender> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 OutlinedButton(
-                   style: OutlinedButton.styleFrom(side: BorderSide(
-                       width: 1,
-                       style: BorderStyle.solid,
-                       color: man ? primaryColor : secondryColor),
-                     shape: RoundedRectangleBorder(
-                         borderRadius: BorderRadius.circular(25)),),
+                  style: OutlinedButton.styleFrom(
+                    side: BorderSide(
+                        width: 1,
+                        style: BorderStyle.solid,
+                        color: man ? primaryColor : secondryColor),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25)),
+                  ),
                   child: Container(
                     height: MediaQuery.of(context).size.height * .065,
                     width: MediaQuery.of(context).size.width * .75,
@@ -79,7 +80,6 @@ class _GenderState extends State<Gender> {
                                 color: man ? primaryColor : secondryColor,
                                 fontWeight: FontWeight.bold))),
                   ),
-
                   onPressed: () {
                     setState(() {
                       woman = false;
@@ -110,7 +110,6 @@ class _GenderState extends State<Gender> {
                                   color: woman ? primaryColor : secondryColor,
                                   fontWeight: FontWeight.bold))),
                     ),
-
                     onPressed: () {
                       setState(() {
                         woman = true;
@@ -141,7 +140,6 @@ class _GenderState extends State<Gender> {
                                 color: other ? primaryColor : secondryColor,
                                 fontWeight: FontWeight.bold))),
                   ),
-
                   onPressed: () {
                     setState(() {
                       woman = false;
