@@ -24,7 +24,7 @@ class ProfilePicSet extends StatefulWidget {
 class _ProfilePicSetState extends State<ProfilePicSet> {
   final au.FirebaseAuth? auth = au.FirebaseAuth.instance;
   String? imgUrl = '';
-  bool isImageUploaded = false;
+  bool isImageUploaded = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,12 +71,13 @@ class _ProfilePicSetState extends State<ProfilePicSet> {
                             )
                           : ClipRRect(
                               borderRadius: BorderRadius.circular(30),
-                              child: Image.network(
-                                imgUrl!,
-                                width: 250,
-                                height: 250,
-                                fit: BoxFit.fill,
-                              ))),
+                              child: Container())),
+                              // child: Image.network(
+                              //   imgUrl!,
+                              //   width: 250,
+                              //   height: 250,
+                              //   fit: BoxFit.fill,
+                              // ))),
                 ),
               ),
               isImageUploaded
@@ -115,7 +116,7 @@ class _ProfilePicSetState extends State<ProfilePicSet> {
                       ),
                     )
                   : SizedBox.shrink(),
-              imgUrl!.length > 0
+              (imgUrl?.length??0) > 0
                   ? Padding(
                       padding: const EdgeInsets.only(bottom: 40),
                       child: Align(
@@ -177,7 +178,16 @@ class _ProfilePicSetState extends State<ProfilePicSet> {
                                     color: secondryColor,
                                     fontWeight: FontWeight.bold),
                               ))),
-                          onTap: () {},
+                          onTap: () {
+                            print(widget.userData);
+                            Navigator.push(
+                                context,
+                                CupertinoPageRoute(
+                                  builder: (context) =>
+                                      AllowLocation(widget.userData),
+                                  // Gender(widget.userData)
+                                ));
+                          },
                         ),
                       ),
                     )

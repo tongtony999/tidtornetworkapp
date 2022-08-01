@@ -26,18 +26,24 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>com**********ar7ubsfi3stm9a</string>
-				<string>fb000000000000</string>
+				<string>fb1074041950213901</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>FacebookAppID</key>
-	<string>000000000000</string>
+	<string>1074041950213901</string>
 	<key>FacebookDisplayName</key>
 	<string>tidtor</string>
 	<key>FacebookClientToken</key>
-	<string>client_token</string>
+	<string>13a4d80268478d50e691b9319b69e2ec</string>
+
+<key>LSApplicationQueriesSchemes</key>
+<array>
+  <string>fbapi</string>
+  <string>fb-messenger-share-api</string>
+</array>
 	<key>LSApplicationCategoryType</key>
 	<string>The iOS Simulator deployment target &apos;IPHONEOS_DEPLOYMENT_TARGET&apos; is set to 7.0, but the range of supported deployment target versions is 8.0 to 13.2.99.</string>
 	<key>LSRequiresIPhoneOS</key>

@@ -55,7 +55,7 @@ class User {
         showGender: doc.data()!['showGender'] ?? "",
         maxDistance: doc.data()!['maximum_distance'],
         sexualOrientation:
-            doc.data()!['sexualOrientation']['orientation'] ?? "",
+            doc.data()?['sexualOrientation']['orientation'] ?? "",
         age: ((DateTime.now()
                     .difference(DateTime.parse(doc.data()!["user_DOB"]))
                     .inDays) /

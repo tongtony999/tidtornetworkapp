@@ -366,14 +366,17 @@ class Login extends StatelessWidget {
         .then((QuerySnapshot snapshot) async {
       if (snapshot.docs.length > 0) {
         if (snapshot.docs[0].data()['location'] != null) {
+          print('Login1');
           Navigator.push(context,
               CupertinoPageRoute(builder: (context) => Tabbar(null, null)));
         } else {
+          print('Login2');
           Navigator.push(
               context, CupertinoPageRoute(builder: (context) => Welcome()));
         }
       } else {
         await _setDataUser(currentUser);
+        print('Login3');
         Navigator.push(
             context, CupertinoPageRoute(builder: (context) => Welcome()));
       }

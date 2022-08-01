@@ -70,7 +70,7 @@ class _SearchLocationState extends State<SearchLocation> {
                       padding: const EdgeInsets.symmetric(horizontal: 30),
                       child: TextField(
                         autofocus: false,
-                        readOnly: true,
+                        readOnly: false,
                         decoration: InputDecoration(
                           hintText: "Enter your city name".tr().toString(),
                           focusedBorder: UnderlineInputBorder(
@@ -82,23 +82,23 @@ class _SearchLocationState extends State<SearchLocation> {
                               TextStyle(color: secondryColor, fontSize: 15),
                         ),
                         controller: _city,
-                        onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => MapBoxAutoCompleteWidget(
-                                language: 'en',
-                                closeOnSelect: true,
-                                apiKey: mapboxApi,
-                                limit: 10,
-                                hint: 'Enter your city name'.tr().toString(),
-                                onSelect: (place) {
-                                  setState(() {
-                                    _mapBoxPlace = place;
-                                    _city.text = _mapBoxPlace.placeName!;
-                                  });
-                                },
-                              ),
-                            )),
+                        // onTap: () => Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //       builder: (context) => MapBoxAutoCompleteWidget(
+                        //         language: 'en',
+                        //         closeOnSelect: true,
+                        //         apiKey: mapboxApi,
+                        //         limit: 10,
+                        //         hint: 'Enter your city name'.tr().toString(),
+                        //         onSelect: (place) {
+                        //           setState(() {
+                        //             _mapBoxPlace = place;
+                        //             _city.text = _mapBoxPlace.placeName!;
+                        //           });
+                        //         },
+                        //       ),
+                        //     )),
                       ),
                     ),
                   ],
@@ -138,10 +138,10 @@ class _SearchLocationState extends State<SearchLocation> {
                                 {
                                   'location': {
                                     'latitude':
-                                        _mapBoxPlace.geometry!.coordinates![1],
+                                       13,
                                     'longitude':
-                                        _mapBoxPlace.geometry!.coordinates![0],
-                                    'address': "${_mapBoxPlace.placeName}"
+                                       100,
+                                    'address': "Thailand"
                                   },
                                   'maximum_distance': 20,
                                   'age_range': {
@@ -178,10 +178,26 @@ class _SearchLocationState extends State<SearchLocation> {
                                       color: secondryColor,
                                       fontWeight: FontWeight.bold),
                                 ))),
-                            onTap: () {
-                              CustomSnackbar.snackbar(
-                                  "Select a location !".tr().toString(),
-                                  _scaffoldKey);
+                            onTap: () async {
+                              widget.userData.addAll(
+                                {
+                                  'location': {
+                                    'latitude':
+                                    13,
+                                    'longitude':
+                                    100,
+                                    'address': "Thailand"
+                                  },
+                                  'maximum_distance': 20,
+                                  'age_range': {
+                                    'min': "20",
+                                    'max': "50",
+                                  },
+                                },
+                              );
+
+                              showWelcomDialog(context);
+                              setUserData(widget.userData);
                             },
                           ),
                         ),
